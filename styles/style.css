@@ -160,8 +160,8 @@ ol {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: "";
-  position: fixed;
-  border: 1px solid #000;
+  display: block;
+  border: 1px solid #1b1919;
   background-color: #fff;
   inline-size: 17px;
   block-size: 17px;
@@ -273,8 +273,8 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  object-fit: contain;
-  object-position: right top;
+  object-fit: cover;
+  object-position: center;
   inline-size: 194px;
   block-size: 103px;
 }
@@ -297,11 +297,15 @@ ol {
 }
 
 .content__video-card-description {
+  max-width: 200px;
+  overflow: hidden;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
   line-height: 16.2px; /* 90% */
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .more-button {
